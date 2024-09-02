@@ -40,4 +40,3 @@ Features:
 Routing to User Service and Order Service
 Load balancing
 Security and rate limiting (if configured)
-![microservices](https://github.com/user-attachments/assets/709a686e-cd41-415b-8277-ad1e204561b3)
