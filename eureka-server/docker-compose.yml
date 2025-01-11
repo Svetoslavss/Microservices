@@ -1,0 +1,21 @@
+version: '3.8'
+services:
+  eureka-server:
+    image: eureka-server:latest
+    container_name: eureka-server
+    build:
+      context: .
+    ports:
+      - "8761:8761"
+    environment:
+      - spring.application.name=eureka-server
+      - server.port=8761
+      - eureka.client.register-with-eureka=false
+      - eureka.client.fetchRegistry=false
+      - eureka.server.enableSelfPreservation=false
+    networks:
+      - eureka-network
+
+networks:
+  eureka-network:
+    driver: bridge
